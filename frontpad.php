@@ -20,7 +20,6 @@ function front_api($order_id){
     $x = $b/$all;
 
     settype($all, "integer");
-    //settype($disk, "integer");
 
     $name = $order->get_billing_first_name();
     $street = $order->get_billing_address_1();
@@ -34,7 +33,7 @@ function front_api($order_id){
     $product = wc_get_product($item->get_product_id());
     $item_sku[] = $product->get_sku();
   }
- 
+
 
 //детали заказа в кодировке utf-8
 $param['secret'] = "4dYAehhBbFB3THrGhenZ7kG82fbGZt2NAH9FTh6YQyKz535b6f34tz2fE3QrhD5H94dSa9DQtaak36rYaeKyDzD7keizGb6F68k67QHrQHEEDYnE322rinkztzT3BQytNGnHiZ32yss2aFr4tbeErs4KRKBdkYA3sQzDBirYEHHEb2ty4B3fTRSznfDD44rhENK524QrAiYB9bZ4EN8irRHFZa7Q4kZy3zkNk44KaKaaQ24eA3sQE4hr4d";				//ключ api
